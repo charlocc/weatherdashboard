@@ -1,0 +1,24 @@
+header{
+    text-align: center;
+    margin: 1%;
+    padding: 2%;
+    background-color: rgb(202, 231, 254); 
+    color:rgb(20, 20, 89);
+}
+
+.search-section{
+    border: solid 2px rgb(137, 203, 254);
+    background-color: rgb(202, 231, 254);  
+    border-radius: 3px;
+    color:rgb(20, 20, 89);
+    padding: 2%;
+}
+
+.search-results{
+    border: solid 2px rgb(137, 203, 254);
+    background-color: rgb(202, 231, 254);  
+    border-radius: 3px;
+    color:rgb(20, 20, 89);
+    padding: 2%;
+    margin: 2%;
+}
