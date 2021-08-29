@@ -5,7 +5,7 @@ var fiveDaysEl = document.querySelector(".five-days");
 var cityName =  document.querySelector(".city-name");
 var currentDate =  document.querySelector(".current-date");
 var symbol =  document.querySelector(".symbol");
-
+var dailyUV = document.querySelector(".daily-UV");
 
 
 // Search input
@@ -21,7 +21,11 @@ function handleSearchFormSubmit(event) {
     return;
   }
 
+  var stored = localStorage.setItem('searchedCities', searchInputVal);
+  console.log(stored);
+
   getCurrentWeather(searchInputVal)
+  
 }
 
 searchFormEl.addEventListener('submit', handleSearchFormSubmit);
