@@ -103,7 +103,7 @@ function getCurrentWeather(city) {
 }   
 
 var today = new Date();
-var date = today.getYear()+ '/' +today.getMonth() + '/' + (today.getDate()+[i]);
+
 
 
 
