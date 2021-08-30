@@ -11,7 +11,7 @@ header{
     background-color: rgb(202, 231, 254);  
     border-radius: 3px;
     color:rgb(20, 20, 89);
-    padding: 2%;
+    padding: 5%;
 }
 
 .search-results{
@@ -21,4 +21,9 @@ header{
     color:rgb(20, 20, 89);
     padding: 2%;
     margin: 2%;
+}
+
+.five-days{
+    display:flex;
+    justify-content: space-around;
 }
