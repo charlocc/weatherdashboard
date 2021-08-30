@@ -45,7 +45,7 @@ function getCurrentWeather(city) {
         var dailyHumidity = document.querySelector(".daily-humidity");
         // Set the text content to the new variables
         cityName.textContent=data.name;
-        dailyTemp.textContent="Temperature = " + Math.floor((data.main.temp - 273)*(9/5)+32) + " degrees Fahrenheit";
+        dailyTemp.textContent="Temperature = " + Math.floor((data.main.temp - 273)*(9/5)+32) + "°F";
         dailyWind.textContent="Wind Speed = " + data.wind.speed + " mph";
         dailyHumidity.textContent="Humidity = " + data.main.humidity + "%";
     }) 
@@ -61,15 +61,15 @@ function getCurrentWeather(city) {
           console.log(data);
           for (var i=0; i<5; i++) {
             var container = document.createElement('div');
-            var date = document.createElement("h3");
             var temp = document.createElement("p");
             var wind = document.createElement("p");
             var humidity = document.createElement("p");
           // Set the text content to the new variables
             // date.textContent=data.results[i].date;
-            temp.textContent="Temperature: " + ((data.daily[i].temp.day - 273)*(9/5)+32) + " degrees Fahrenheit";
+            temp.textContent="Temperature: " + Math.floor((data.daily[i].temp.day - 273)*(9/5)+32) + "°F";
             wind.textContent="Wind speed: " + data.daily[i].wind_speed + " mph";
             humidity.textContent="Humidity: " + data.daily[i].humidity + "%";
+            dailyUV.textContent= "UVI: " + data.current.uvi;
           // Add new variables to the div
             // container.appendChild(date);
             container.appendChild(temp);
@@ -77,12 +77,11 @@ function getCurrentWeather(city) {
             container.appendChild(humidity);
             fiveDaysEl.appendChild(container);
           // Style of the cards that appear
-            container.style.border = "black";
+            container.style.border = "rgb(20, 20, 89) solid 2px";
             container.style.backgroundColor= "white";  
             container.style.margin = "5px";
-            container.style.color = "black";
-            container.style.textAlign = "center";
-            container.style.justifyContent = "center";
+            container.style.padding = "10px";
+            container.style.borderRadius = "9px";
           }
         });
     }
